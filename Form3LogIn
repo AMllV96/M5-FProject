@@ -1,0 +1,78 @@
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TravelAgencyFP
+{
+    public partial class Form3 : Form
+    {
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(Common.connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * from Users where Username = @Username", con);
+                cmd.Parameters.AddWithValue("@Username", usernameTextBox.Text);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                DataTable resultTable = new DataTable();
+                adapter.Fill(resultTable);
+
+                if (resultTable.Rows.Count > 0)
+                {
+                    int id = (int)resultTable.Rows[0]["UserID"];
+
+                    string password1 = passTextBox.Text;
+                    string password2 = (string)resultTable.Rows[0]["Password"];
+                    string date = (string)resultTable.Rows[0]["DateReg"];
+
+                    int role = (Int32)resultTable.Rows[0]["role"];
+                    if (hashPassword($"{password1}{date}").Equals(password2))
+                    {
+
+                        User user = new User(id, usernameTextBox.Text, role);
+                        Form4 form4 = new Form4(user);
+                        form4.ShowDialog();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No such username or password");
+                    }
+                }
+            }
+        }
+
+        string hashPassword(string pass)
+        {
+            SHA256 hashAlgorithm = SHA256.Create();
+            var bytes = Encoding.Default.GetBytes(pass);
+            var hash = hashAlgorithm.ComputeHash(bytes);
+            return Convert.ToBase64String(hash);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
