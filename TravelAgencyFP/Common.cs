@@ -10,7 +10,7 @@ namespace TravelAgencyFP
     
         class Common
     {
-        public static string connectionString = @"Data Source=LAB109PC20\SQLEXPRESS;Initial Catalog=TravelAgency;Integrated Security=True";
+        public static string connectionString = @"Data Source=DELL;Initial Catalog=TravelAgency;Integrated Security=True";
         
        
     }

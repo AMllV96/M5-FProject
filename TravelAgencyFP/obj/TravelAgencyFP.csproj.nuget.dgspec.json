@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Users\\t.daskalova24\\TravelAgencyFP\\TravelAgencyFP\\TravelAgencyFP.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\M5-FProject\\TravelAgencyFP\\TravelAgencyFP.csproj": {}
   },
   "projects": {
-    "H:\\Users\\t.daskalova24\\TravelAgencyFP\\TravelAgencyFP\\TravelAgencyFP.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\M5-FProject\\TravelAgencyFP\\TravelAgencyFP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Users\\t.daskalova24\\TravelAgencyFP\\TravelAgencyFP\\TravelAgencyFP.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\M5-FProject\\TravelAgencyFP\\TravelAgencyFP.csproj",
         "projectName": "TravelAgencyFP",
-        "projectPath": "H:\\Users\\t.daskalova24\\TravelAgencyFP\\TravelAgencyFP\\TravelAgencyFP.csproj",
-        "packagesPath": "C:\\Users\\T.Daskalova24\\.nuget\\packages\\",
-        "outputPath": "H:\\Users\\t.daskalova24\\TravelAgencyFP\\TravelAgencyFP\\obj\\",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\M5-FProject\\TravelAgencyFP\\TravelAgencyFP.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\M5-FProject\\TravelAgencyFP\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\T.Daskalova24\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
